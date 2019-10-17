@@ -25,6 +25,20 @@ img{
 .themes-buttons.container {
     padding: 2em 0;
 }
+/*.theme-item {
+	box-shadow: 0 0 20px #9da3a9;
+	transition: box-shadow 2s;
+}
+.theme-item:hover {
+	box-shadow: 0 0 40px #9da3a9;
+}*/
+.theme-item {  
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.theme-item:hover {  
+  box-shadow: 0 5px 15px 2px rgba(0, 0, 0, 0.1);
+}
 .theme-title {
     color: #54a9a3;
     font-size: 1rem;
