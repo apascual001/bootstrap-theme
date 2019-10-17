@@ -2,11 +2,17 @@
 img{
 	max-width: 100%;
 }
+/* Sections */
+.page-section  {
+	background-color: #f2f2f2;
+}
 /* Butttons */
 .btn { min-width: 100px; }
 .btn.white{
 	background-color: #fff;
-
+}
+[type=submit]{
+	border: 1px solid #54a9a3;
 }
 /* Hero area */
 .hero-area-bg{
@@ -19,19 +25,9 @@ img{
 	font-size: 4rem;
 }
 /* Themes section */
-.themes-section {
-	background-color: #f2f2f2;
-}
 .themes-buttons.container {
     padding: 2em 0;
 }
-/*.theme-item {
-	box-shadow: 0 0 20px #9da3a9;
-	transition: box-shadow 2s;
-}
-.theme-item:hover {
-	box-shadow: 0 0 40px #9da3a9;
-}*/
 .theme-item {  
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
   transition: box-shadow 0.3s ease-in-out;
