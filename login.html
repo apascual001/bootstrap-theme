@@ -28,8 +28,8 @@
 				      <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
 				     </ul>
 				</div>    
-			    <form class="form-inline">
-				    <input class="form-control" type="text" placeholder="Buscar">
+			    <form class="form-inline was-validated">
+				    <input class="form-control" type="text" pattern=".{3,}" placeholder="Buscar" required title="3 characters minimum">
 				</form>
 		   </div>
 		</nav>
@@ -48,14 +48,16 @@
 		<section class="page-section">
 			<div class="container py-4">
 				<div class="row row justify-content-center family-sans text-uppercase text-center">
-					<form>
+					<form class="was-validated">
 						  <div class="form-group">
 						    <label for="exampleInputEmail1">Email</label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introducir email">
+						    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introducir email" value="" required="required" data-error="Please enter a valid email.">
+              				<div class="help-block with-errors"></div>
+
 						  </div>
 						  <div class="form-group">
 						    <label for="exampleInputPassword1">Contraseña</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
 						  </div>
 						  <button type="submit" class="btn white">Enviar</button>
 					</form>
