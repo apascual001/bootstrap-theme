@@ -7,7 +7,7 @@ img{
 	background-color: #f2f2f2;
 }
 /* Butttons */
-.btn { min-width: 100px; }
+.btn { min-width: 160px; }
 .btn.white{
 	background-color: #fff;
 }
@@ -19,15 +19,31 @@ img{
 	background-image: url(../images/hero-home.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 10rem 0;
+	font-size: 0.8em;
+	padding: 10rem 0 2rem;
 }
-.section-title{
-	font-size: 4rem;
+	.section-title{
+		font-size: 1.6rem;
+	}
+
+@media (min-width: 768px) {
+	.hero-area-bg{
+		font-size: 1em;
+		padding: 10rem 0;
+	}
+	.section-title{
+		font-size: 4rem;
+	}
 }
+
 /* Themes section */
 .themes-buttons.container {
     padding: 2em 0;
 }
+.themes-buttons .btn {
+    margin-bottom: 0.8em;
+}
+
 .theme-item {  
   box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
   transition: box-shadow 0.3s ease-in-out;
