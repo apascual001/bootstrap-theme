@@ -23,16 +23,19 @@
 			  	<div class="collapse navbar-collapse" id="main-navbar">
 				    <ul class="navbar-nav ml-auto">
 				      <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
-				      <li class="nav-item"><a class="nav-link px-3" href="#themes">Plantillas</a></li>
 				      <li class="nav-item"><a class="nav-link px-3" href="register.html">Registro</a></li>
+				      <li class="nav-item"><a class="nav-link px-3" href="register-otro.html">Otro Registro</a></li>
 				      <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
 				     </ul>
 				</div>    
-			    <form class="form-inline was-validated">
-				    <input class="form-control" type="text" pattern=".{3,}" placeholder="Buscar" required title="3 characters minimum">
+			    <form class="form-inline" method="post" action="#">
+				    <input class="form-control" type="text" placeholder="Buscar" pattern=".{3,}" oninvalid="setCustomValidity('La palabra debe tener como mínimo 3 caracteres');" />
 				</form>
+
 		   </div>
+
 		</nav>
+
 		<!-- Hero area -->
 	    <div id="hero-area" class="hero-area-bg text-light text-center d-flex my-2">
       		<div class="container">
@@ -92,7 +95,7 @@
 
 
 
-
+<script src="js/script.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

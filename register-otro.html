@@ -48,25 +48,54 @@
 	</header>
 		<section class="page-section">
 			<div class="container py-4">
-				<div class="row row justify-content-center family-sans text-uppercase text-center">
-					<form class="col-12 col-md-6">
-						  <div class="form-group">
-						    <label for="exampleInputEmail1">Email</label>
-						    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introducir email" value="" required="required" data-error="Please enter a valid email.">
-              				<div class="help-block with-errors"></div>
+				<div class="row justify-content-center family-sans text-uppercase text-center">
 
-						  </div>
-						  <div class="form-group">
-						    <label for="exampleInputPassword1">Contraseña</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña" required>
-						  </div>
-						  <button type="submit" class="btn white">Enviar</button>
+					<form action="file:///Users/anapascual/localhost/bootstrap/login.html" method=post
+      onsubmit="return Validate()" name="vform" class="col-12 col-md-6">
+						<div class="form-group">
+						    <div class="form-row">
+    							
+
+						    	<div id="username_div" class="col-12">
+								    <label>Nombre usuario</label>
+								    <input name="username" type="text" class="form-control"  placeholder="Introducir Nombre usuario" >
+              						<div id="name_error"></div>
+						    	</div>
+
+    							<div id="email_div" class="col-12">
+								    <label>Email</label>
+								    <input name="email" type="email" class="form-control"  placeholder="Introducir email" >
+              						<div id="email_error"></div>
+						    	</div>
+						    	<div class="col-12">
+						    		<label>Provincia</label>
+								     <select>
+								        
+								    </select>
+						    	</div>
+  							</div>
+						</div>
+
+						<div class="form-group">
+						    <div class="form-row">
+    							<div id="password_div" class="col-12">
+								    <label>Contraseña</label>
+						    		<input type="password" class="form-control" name="password" placeholder="Contraseña">
+						    	</div>
+						    	<div id="pass_confirm_div" class="col-12">
+						    		<label>Repita Contraseña</label>
+						    		<input type="password" class="form-control"  name="password_confirm" placeholder="Repita Contraseña">
+						    		<div id="password_error"></div>
+						    	</div>
+  							</div>
+						</div>
+						<button type="submit" name="register" value="Register" class="btn white">Enviar</button>
 					</form>
+
+
 				</div>
 			</div>
 		</section>
-
-
 	<footer>
 	    <div class="text-center d-flex">
       		<div class="container py-4">
@@ -78,14 +107,7 @@
 			</div>
 		</div>
 	</footer>
-
-
-
-
-
-
-
-
+<script src="js/script.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
