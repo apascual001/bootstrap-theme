@@ -23,14 +23,15 @@
 			  	<div class="collapse navbar-collapse" id="main-navbar">
 				    <ul class="navbar-nav ml-auto">
 				      <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
-				      <li class="nav-item"><a class="nav-link px-3" href="#themes">Plantillas</a></li>
 				      <li class="nav-item"><a class="nav-link px-3" href="register.html">Registro</a></li>
+				      <li class="nav-item"><a class="nav-link px-3" href="register-otro.html">Otro Registro</a></li>
 				      <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
 				     </ul>
 				</div>    
-			    <form class="form-inline was-validated">
-				    <input class="form-control" type="text" pattern=".{3,}" placeholder="Buscar" required title="3 characters minimum">
+			    <form class="form-inline" method="post" action="#">
+				    <input class="form-control" type="text" placeholder="Buscar" pattern=".{3,}" oninvalid="setCustomValidity('La palabra debe tener como mínimo 3 caracteres');" />
 				</form>
+
 		   </div>
 		</nav>
 		<!-- Hero area -->
@@ -47,17 +48,17 @@
 	</header>
 		<section class="page-section">
 			<div class="container py-4">
-				<div class="row row justify-content-center family-sans text-uppercase text-center">
-					<form class="was-validated" method=post
+				<div class="row justify-content-center family-sans text-uppercase text-center">
+					<form action="file:///Users/anapascual/localhost/bootstrap/login.html" method=post
       oninput='exampleInputPassword2.setCustomValidity(exampleInputPassword2.value != exampleInputPassword1.value ? "Contraseñas no coinciden." : "")'>
 						<div class="form-group">
 						    <div class="form-row">
-    							<div class="col-12 col-md-8">
+    							<div class="col-12">
 								    <label for="exampleInputEmail1">Email</label>
 								    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introducir email" value="" required="required" data-error="Please enter a valid email.">
               				<div class="help-block with-errors"></div>
 						    	</div>
-						    	<div class="col-12 col-md-8">
+						    	<div class="col-12">
 						    		<label for="inputState">Provincia</label>
 								     <select id="inputState" class="form-control" required="required" data-error="Por favor, escoge una opción.">
 								        <option value=""selected>Escoja Provincia</option>
@@ -71,11 +72,11 @@
 
 						<div class="form-group">
 						    <div class="form-row">
-    							<div class="col-12 col-md-8">
+    							<div class="col-12">
 								    <label for="exampleInputPassword1">Contraseña</label>
 						    		<input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" placeholder="Contraseña" required>
 						    	</div>
-						    	<div class="col-12 col-md-8">
+						    	<div class="col-12">
 						    		<label for="exampleInputPassword2">Repita Contraseña</label>
 						    		<input type="password" class="form-control" id="exampleInputPassword2" name="exampleInputPassword2"placeholder="Repita Contraseña" required>
 						    	</div>
@@ -83,22 +84,6 @@
 						</div>
 						<button type="submit" class="btn white">Enviar</button>
 					</form>
-
-
-<form method=post
-      oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
-  <p>
-  <label for="username">E-mail address:</label>
-  <input id="username" type=email required name=un>
-  <p>
-  <label for="password1">Password:</label>
-  <input id="password1" type=password required name=up>
-  <p>
-  <label for="password2">Confirm password:</label>
-  <input id="password2" type=password name=up2>
-  <p>
-  <input type=submit value="Create account">
-</form>
 
 
 				</div>
