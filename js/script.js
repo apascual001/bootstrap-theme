@@ -1,15 +1,18 @@
 // SELECTING ALL TEXT ELEMENTS
 var username = document.forms['vform']['username'];
 var email = document.forms['vform']['email'];
+var state = document.forms['vform']['state'];
 var password = document.forms['vform']['password'];
 var password_confirm = document.forms['vform']['password_confirm'];
 // SELECTING ALL ERROR DISPLAY ELEMENTS
 var name_error = document.getElementById('name_error');
 var email_error = document.getElementById('email_error');
+var state_error = document.getElementById('state_error');
 var password_error = document.getElementById('password_error');
 // SETTING ALL EVENT LISTENERS
 username.addEventListener('blur', nameVerify, true);
 email.addEventListener('blur', emailVerify, true);
+state.addEventListener('blur', stateVerify, true);
 password.addEventListener('blur', passwordVerify, true);
 // validation function
 function Validate() {
@@ -35,6 +38,14 @@ function Validate() {
     document.getElementById('email_div').style.color = "red";
     email_error.textContent = "Email es requerido";
     email.focus();
+    return false;
+  }
+  // validate Provincia
+  if (state.value == "Escoja Provincia") {
+    state.style.border = "1px solid red";
+    document.getElementById('state_div').style.color = "red";
+    state_error.textContent = "Provincia es requerido";
+    state.focus();
     return false;
   }
   // validate password
@@ -70,6 +81,14 @@ function emailVerify() {
   	document.getElementById('email_div').style.color = "#5e6e66";
   	email_error.innerHTML = "";
   	return true;
+  }
+}
+function stateVerify() {
+  if (state.value != "") {
+    state.style.border = "1px solid #5e6e66";
+    document.getElementById('state_div').style.color = "#5e6e66";
+    state_error.innerHTML = "";
+    return true;
   }
 }
 function passwordVerify() {
