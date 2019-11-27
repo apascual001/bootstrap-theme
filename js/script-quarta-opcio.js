@@ -10,11 +10,10 @@ var email_error = document.getElementById('email_error');
 var state_error = document.getElementById('state_error');
 var password_error = document.getElementById('password_error');
 // SETTING ALL EVENT LISTENERS
-//username.addEventListener('input',validate,true);
-//email.addEventListener('blur', validate, true);
-//state.addEventListener('blur', validate, true);
-//password.addEventListener('blur', validate, true);
-
+username.addEventListener('blur', validate, true);
+email.addEventListener('blur', validate, true);
+state.addEventListener('blur', validate, true);
+password.addEventListener('blur', validate, true);
 
 /*window.onload = iniciar; 
 function iniciar() {
@@ -22,7 +21,7 @@ function iniciar() {
 }
 */
 
-function comprobar(e) { 
+function comprobar(x) { 
   var x = 0; 
   console.log(x);
   if (username.value.length < 3) {
@@ -32,7 +31,6 @@ function comprobar(e) {
     username.focus();
     x ++;
     console.log(x);
-    e.preventDefault();
   }
   if (email.value == "") {
     email.style.border = "1px solid red";
@@ -41,7 +39,6 @@ function comprobar(e) {
     email.focus();
     x ++;
     console.log(x);
-    e.preventDefault();
   }
 
   if (state.value == "Escoja Provincia") {
@@ -51,7 +48,6 @@ function comprobar(e) {
     state.focus();
     x ++;
     console.log(x);
-    e.preventDefault();
   }
   if (password.value == "") {
     password.style.border = "1px solid red";
@@ -60,7 +56,6 @@ function comprobar(e) {
     password.focus();
     x ++;
     console.log(x);
-    e.preventDefault();
   }
   if (password.value != password_confirm.value) {
     password_confirm.style.border = "1px solid red";
@@ -68,7 +63,6 @@ function comprobar(e) {
     password_confirm_error.innerHTML = "Las dos contraseñas no coinciden";
     x ++;
     console.log(x);
-    e.preventDefault();
   }
   return x;
 }

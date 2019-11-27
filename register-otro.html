@@ -51,25 +51,24 @@
 				<div class="row justify-content-center family-sans text-uppercase text-center">
 
 					<form action="file:///Users/anapascual/localhost/bootstrap/login.html" method=post
-      onsubmit="return Validate()" name="vform" class="col-12 col-md-6">
+      onsubmit="return validate()" name="vform" class="col-12 col-md-6">
 						<div class="form-group">
 						    <div class="form-row">
     							
 
 						    	<div id="username_div" class="col-12">
 								    <label>Nombre usuario</label>
-								    <input name="username" type="text" class="form-control"  placeholder="Introducir Nombre usuario" >
+								    <input name="username" type="text" class="form-control"  placeholder="Introducir Nombre usuario" oninput="validate()">
               						<div id="name_error"></div>
 						    	</div>
-
     							<div id="email_div" class="col-12">
 								    <label>Email</label>
-								    <input name="email" type="email" class="form-control"  placeholder="Introducir email" >
+								    <input name="email" type="text" class="form-control"  placeholder="Introducir email" oninput="validate()">
               						<div id="email_error"></div>
 						    	</div>
 						    	<div id="state_div" class="col-12">
 						    		<label>Provincia</label>
-								    <select name="state" type="text" class="form-control">
+								    <select name="state" type="text" class="form-control" oninput="validate()">
 								        <option value="Escoja Provincia">Escoja Provincia</option>
 								        <option value="provincia 1">provincia 1</option>
 								        <option value="provincia 2">provincia 2</option>
@@ -84,16 +83,17 @@
 						    <div class="form-row">
     							<div id="password_div" class="col-12">
 								    <label>Contraseña</label>
-						    		<input type="password" class="form-control" name="password" placeholder="Contraseña">
+						    		<input type="password" class="form-control" name="password" placeholder="Contraseña" oninput="validate()">
+						    		<div id="password_error"></div>
 						    	</div>
 						    	<div id="pass_confirm_div" class="col-12">
 						    		<label>Repita Contraseña</label>
-						    		<input type="password" class="form-control"  name="password_confirm" placeholder="Repita Contraseña">
-						    		<div id="password_error"></div>
+						    		<input type="password" class="form-control"  name="password_confirm" placeholder="Repita Contraseña" oninput="validate()">
+						    		<div id="password_confirm_error"></div>
 						    	</div>
   							</div>
 						</div>
-						<button type="submit" name="register" value="Register" class="btn white">Enviar</button>
+						<button type="submit" name="register" id="enviar" value="Register" class="btn white">Enviar</button>
 					</form>
 
 
