@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Cars</title>
+</head>
+<body>
+    <!-- Header -->
+	<header>
+            <!-- Navigation -->
+            <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
+                <div class="container">
+                      <a href="index.html" class="navbar-brand">DONATHEMES</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" 
+                     aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                      <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="navbar-nav ml-auto">
+                          <li class="nav-item"><a class="nav-link px-3" href="index.html">Inicio</a></li>
+                          <li class="nav-item"><a class="nav-link px-3" href="register.html">Registro</a></li>
+                          <li class="nav-item"><a class="nav-link px-3" href="register-otro.html">Otro Registro</a></li>
+                          <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
+                         </ul>
+                    </div>    
+                    <form class="form-inline" method="post" action="#">
+                        <input class="form-control" type="text" placeholder="Buscar" pattern=".{3,}" oninvalid="setCustomValidity('La palabra debe tener como mínimo 3 caracteres');" />
+                    </form>
+    
+               </div>
+            </nav>
+            <!-- Hero area -->
+            <div id="hero-area" class="hero-area-bg text-light text-center d-flex">
+                  <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-12 col-md-8">
+                            <h2 class="section-title">Donathemes shop</h2>
+                            <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt blandit mollis. Donec ac enim mi. Nullam sit amet sagittis dui. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section class="page-section">
+			<div class="container py-4">
+				<div class="row justify-content-center family-sans text-uppercase text-center">
+                    <form action="" method="POST" id="vform" name="vform">
+                        <div class="row">
+                            <div id="carInfo" class="col-6">
+                                <h2>Introduzca los datos de su coche</h2>
+                                <div id="plate_div">
+                                    <label>MATRÍCULA COCHE:</label>
+                                        <input name="plate" id="plate" type="text" class="form-control"  placeholder="Introducir Matrícula" oninput="">
+                                    <div id="plate_error"></div>
+                                </div>
+                                <div id="color_div">
+                                        <label>COLOR COCHE:</label>
+                                            <input name="color" id="color" type="text" class="form-control"  placeholder="Introducir Color" oninput="">
+                                        <div id="color_error"></div>
+                                </div>
+                                <div id="brand_div">
+                                        <label>MARCA COCHE:</label>
+                                            <input name="brand" id="brand" type="text" class="form-control"  placeholder="Introducir Marca" oninput="">
+                                        <div id="brand_error"></div>
+                                </div>
+                                
+                    <!-- 
+                                <button onclick="createCar()">Create car</button>
+                                <button onclick="createCar('1212SDS','SEAT','ROJO')">Create car</button>
+                                <button onclick="createCar(this.vform.plate.value =  plate,'SEAT','ROJO')" type="submit" name="register" id="enviar" value="Register" class="btn white">Create car</button>
+                                <button onclick="createCar()" type="submit" name="register" id="enviar" value="Register" class="btn white">Create car</button>
+                    -->    
+                                <button id="enviar" type="submit">Create car</button>
+                            </div>
+                            <div id="showInfo" class="col-6">
+                                        <h2 >Esta es la información de su coche</h2>
+                            </div> 
+                        </div>                  
+                    </form>  
+                </div>     
+            </div>
+    </section>
+
+    <script src="js/models/car.js"></script>
+    <script src="js/models/wheel.js"></script>
+    <script src="js/controllers/controller.js"></script>
+    
+</body>
